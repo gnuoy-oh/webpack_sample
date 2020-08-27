@@ -1,7 +1,15 @@
-# webpack_sample
+## webpack_sample
 
-## Flow
+### Flow
 
-### 1. npm i
+#### 1. npm 설치
 
-### 2. npm run prod (배포용으로 open - production)
+~~~
+npm i
+~~~
+
+#### 2. mode production
+
+~~~
+npm run prod 
+~~~
