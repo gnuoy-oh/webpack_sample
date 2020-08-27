@@ -1,3 +1,7 @@
 # webpack_sample
 
-## webpack practice!
+## Flow
+
+### 1. npm i
+
+### 2. npm run prod (배포용으로 open - production)

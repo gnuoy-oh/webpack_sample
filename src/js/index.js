@@ -3,10 +3,15 @@ import "@babel/polyfill";
 /**************************
 css
 **************************/
-// import '../css/common.scss';
+import '../scss/common.scss';
 
 /**************************
-image
+svg image
 **************************/
-console.log('hoho')
-// src/js/main.js
+
+import '../svgImages/1.svg'
+import '../svgImages/2.svg'
+import '../svgImages/3.svg'
+import '../svgImages/4.svg'
+import '../svgImages/5.svg'
+

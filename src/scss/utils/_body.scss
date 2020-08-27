@@ -1,7 +1,7 @@
 // src/sass/partials/_body.scss
 body {
   color: $font_color;
-  background-color: #ccc;
+  background-color: #ddd;
   display: flex;
 
 
@@ -26,7 +26,17 @@ body {
     display: block;
     height: 64px;
     width: 64px;
-    background-image: url('../images/2.png');
+    background-image: url('../images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .homeIcon2 {
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-image: url('../images/3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
