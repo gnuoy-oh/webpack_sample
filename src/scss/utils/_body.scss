@@ -1,8 +1,9 @@
 // src/sass/partials/_body.scss
 body {
   color: $font_color;
-  background-color: #08c;
-  
+  background-color: #ccc;
+  display: flex;
+
 
   // Property Nesting
   font: {
@@ -11,4 +12,23 @@ body {
   }
 
   line-height: $line_height;
+
+  .homeIcon {
+    height: 64px;
+    width: 64px;
+    background-image: url('../images/webpacklogo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .logoImg {
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-image: url('../images/2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
 }

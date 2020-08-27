@@ -1,2 +1,23 @@
-body{color:#333;background-color:#08c;font-size:16px;font-family:Arial,sans-serif;line-height:125%}
+body {
+  color: #333;
+  background-color: #ccc;
+  display: flex;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 125%; }
+  body .homeIcon {
+    height: 64px;
+    width: 64px;
+    background-image: url(/dist/images/webpacklogo.png?8a4c244ab3113944556d363a9e88b374);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
+  body .logoImg {
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-image: url(/dist/images/2.png?8a4c244ab3113944556d363a9e88b374);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
 

@@ -15,6 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "./js/[name].bundle.js",
+    publicPath: '/dist/'
   },
 
   module: {
@@ -37,6 +38,7 @@ module.exports = {
           MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
           "sass-loader", // compiles Sass to CSS, using Node Sass by default
+          "postcss-loader"
         ],
         exclude: /node_modules/,
       },
@@ -45,10 +47,10 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            useRelativePath: true,
-            outputPath: "./src/images", // 대상파일을 저장할 경로 지정
-            publicPath: "./dist/images/", // 번들링 될 상대경로 지정
-            name: "[name].[ext]?[hash]",
+            // useRelativePath: true,
+            // outputPath: "./src/images", // 대상파일을 저장할 경로 지정
+            // publicPath: "./images/", // 번들링 될 상대경로 지정
+            name: "images/[name].[ext]?[hash]",
           },
         },
       },
