@@ -1,7 +1,6 @@
 const path = require("path"),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
-  ExtractTextPlugin = require("extract-text-webpack-plugin"),
   { CleanWebpackPlugin } = require("clean-webpack-plugin"),
   SvgSpriteLoader = require("svg-sprite-loader/plugin");
 
@@ -12,7 +11,7 @@ module.exports = {
   mode: "development",
 
   // 어디를 컴파일 + 번들링 할지 지정
-  entry: ["@babel/polyfill", "./src/js/index.js"],
+  entry: ["@babel/polyfill", "./src/js/index.js", "./src/scss/layout/common.scss", "./src/scss/utils/common.scss"],
 
   // 컴파일 + 번들링된 js 파일이 저장될 경로와 이름 지정
   output: {
@@ -40,7 +39,6 @@ module.exports = {
       // SASS, SCSS, CSS 파일을 가져와서 컴파일 해준다.
       {
         test: /\.(sa|sc|c)ss$/,
-        // include: path.resolve(__dirname, "src/scss/utils"),
         use: [
           MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
@@ -75,11 +73,10 @@ module.exports = {
   },
 
   plugins: [
-
     // 컴파일 + 번들링한 CSS 위치를 지정한다.
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
-      chunkFilename: "./css/[id].css"
+      chunkFilename: '[id].css',
     }),
 
     // 최종 HTML 위치 지정

@@ -4,6 +4,7 @@ import "@babel/polyfill";
 css
 **************************/
 import '../scss/layout/common.scss';
+import '../scss/utils/common.scss';
 
 /**************************
 svg image
