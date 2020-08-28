@@ -3,6 +3,7 @@ import "@babel/polyfill";
 /**************************
 css
 **************************/
+
 import '../scss/layout/common.scss';
 import '../scss/utils/common.scss';
 
@@ -10,9 +11,10 @@ import '../scss/utils/common.scss';
 svg image
 **************************/
 
-import '../svgImages/1.svg'
-import '../svgImages/2.svg'
-import '../svgImages/3.svg'
-import '../svgImages/4.svg'
-import '../svgImages/5.svg'
+import '../svgIcon/1.svg'
+import '../svgIcon/2.svg'
+import '../svgIcon/3.svg'
+import '../svgIcon/4.svg'
+import '../svgIcon/5.svg'
+
 

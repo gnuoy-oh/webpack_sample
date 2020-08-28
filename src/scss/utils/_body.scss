@@ -1,8 +1,12 @@
 // src/sass/partials/_body.scss
 body {
   color: $font_color;
-  background-color: #ddd;
+  background-color: #ccc;
   display: flex;
+
+  h1{
+    font-size: 60px;
+  }
 
 
   // Property Nesting
@@ -41,4 +45,13 @@ body {
     background-size: cover;
     background-position: 50% 50%;
   }
+}
+
+#svg-icons{
+  display: none;
+}
+
+svg{
+  fill: #666;
+  max-width: 100px;
 }
