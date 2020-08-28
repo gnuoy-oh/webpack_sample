@@ -1,9 +1,11 @@
 const path = require("path"),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  ExtractTextPlugin = require("extract-text-webpack-plugin"),
   { CleanWebpackPlugin } = require("clean-webpack-plugin"),
   SvgSpriteLoader = require("svg-sprite-loader/plugin");
 
+// CSS Theme
 module.exports = {
   // webpack에 내장된 최적화를 사용하도록 지시하는 것 (development / production / none)
   // mode: options.mode,
@@ -34,9 +36,11 @@ module.exports = {
           },
         },
       },
+
       // SASS, SCSS, CSS 파일을 가져와서 컴파일 해준다.
       {
         test: /\.(sa|sc|c)ss$/,
+        // include: path.resolve(__dirname, "src/scss/utils"),
         use: [
           MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
@@ -45,6 +49,7 @@ module.exports = {
         ],
         exclude: /node_modules/,
       },
+
       // 이미지 파일 형식을 가져온다.
       {
         test: /\.(png|jp(e*)g|gif)$/,
@@ -59,6 +64,7 @@ module.exports = {
           },
         },
       },
+
       // Icon svg sprite generate
       {
         test: /\.svg$/,
@@ -72,7 +78,8 @@ module.exports = {
 
     // 컴파일 + 번들링한 CSS 위치를 지정한다.
     new MiniCssExtractPlugin({
-      filename: "./css/style.css",
+      filename: "./css/[name].css",
+      chunkFilename: "./css/[id].css"
     }),
 
     // 최종 HTML 위치 지정

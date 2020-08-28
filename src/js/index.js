@@ -3,7 +3,7 @@ import "@babel/polyfill";
 /**************************
 css
 **************************/
-import '../scss/common.scss';
+import '../scss/layout/common.scss';
 
 /**************************
 svg image
