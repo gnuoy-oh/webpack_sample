@@ -7,7 +7,6 @@ const path = require("path"),
 // CSS Theme
 module.exports = {
   // webpack에 내장된 최적화를 사용하도록 지시하는 것 (development / production / none)
-  // mode: options.mode,
   mode: "development",
 
   // 어디를 컴파일 + 번들링 할지 지정

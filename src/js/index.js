@@ -27,3 +27,10 @@ import '../images/1.jpg';
 /**************************
 js test
 **************************/
+const varText = "hello";
+
+const testConsole = () => {
+  console.log(varText);
+}
+
+testConsole();
