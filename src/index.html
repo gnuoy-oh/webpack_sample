@@ -36,7 +36,7 @@
       <strong>SCSS -> CSS 컴파일을 했습니다.</strong>
       <p><em>SCSS 하위 나눠진 폴더 별로 각각 compile 하는 방법 검토 필요</em> -> (현재는 하나의 css파일로 컴파일 되고 있음)</p>
       <strong>svg 파일을 불러옵니다.</strong>
-      <p>- index.js에 필요한 svg icon을  import하고, webpack.config.js에서 svg-sprite-loader를 실행합니다. -> <em>import 하지 않고 바로 가져다 쓸 수 없는지 검토 필요</em></p>
+      <p>- index.js에 필요한 svg icon을  import하고, webpack.config.js에서 svg-sprite-loader를 실행합니다. import 하지 않으면 출력되지 않습니다.</p>
       <ul>
         <li>
           <button class="btn-submit">
@@ -59,6 +59,13 @@
             </svg>
           </button>
         </li>
+        <li>
+          <button class="btn-submit">
+            <svg class="svg-comm">
+              <use xlink:href="#5"></use>
+            </svg>
+          </button>
+        </li>
       </ul>
       <strong>background-image로 png 파일을 불러옵니다.</strong>
       <p>- 따로 import 시켜줄 필요 없이, webpack.config.js에서 file-loader로 감지합니다.</p>
@@ -75,7 +82,7 @@
       </ul>
 
       <strong>img 태그로 png 파일을 불러옵니다.</strong>
-      <p>index.js에서 사용할 이미지 파일을 import 해서 img 태그를 사용합니다. import 하지 않으면 아래와 같이 출력되지 않음. -> <em>import 하지 않고 바로 가져다 쓸 수 없는지 검토 필요</em></p>
+      <p>index.js에서 사용할 이미지 파일을 import 해서 img 태그를 사용합니다. import 하지 않으면 아래와 같이 출력되지 않습니다. -> <em>import 하지 않고 바로 가져다 쓸 수 없는지 검토 필요</em></p>
       <img src="../images/1.jpg" alt="webpack" />
       <img src="../images/2.png" alt="logo" />
     </div>
