@@ -8,8 +8,8 @@
 npm i
 ~~~
 
-#### 2. mode production
+#### 2. mode development
 
 ~~~
-npm run prod 
+npm run build
 ~~~
