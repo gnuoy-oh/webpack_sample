@@ -36,6 +36,10 @@ module.exports = {
 
       {
         test: /\.(sa|sc|c)ss$/,
+        include: [
+          path.resolve(__dirname, "./src/scss/utils"),
+          path.resolve(__dirname, "./src/scss/layout"),
+        ],
         use: [
           // "style-loader", // css-loader로 읽은 CSS 파일들을 html 파일에서 style태그를 만들어서 head 태그 안에 넣어준다. 현재 프로젝트에서는 불필요 (분리해서 scss 사용해야 함)
           MiniCssExtractPlugin.loader, // JS에 포함된 CSS를 별도의 파일로 추출해줘서, bundle.js에 컴파일된 CSS를 포함시키지 않고 별도의 CSS 파일로 분리해서 하나의 파일로 번들링 해준다.
@@ -71,6 +75,10 @@ module.exports = {
         }
       },
     ],
+  },
+
+  devServer: {
+      port: 9000
   },
 
   plugins: [
