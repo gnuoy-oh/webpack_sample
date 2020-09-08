@@ -1,0 +1,70 @@
+.svg-comm {
+  fill: #333;
+  width: 50px;
+  height: 50px; }
+
+body {
+  max-width: 1200px;
+  margin: 25px auto;
+  background-color: #ddd; }
+  body h1 {
+    font-size: 35px; }
+  body strong {
+    display: block;
+    margin: 35px 0 10px;
+    font-size: 20px;
+    color: #ff6754; }
+  body p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666; }
+    body p em {
+      font-weight: bold;
+      color: #555;
+      text-decoration: underline; }
+  body ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  body .btn-submit {
+    display: inline-block;
+    width: 50px;
+    height: 50px; }
+  body .homeIcon {
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-image: url(/dist/images/webpacklogo.png?8a4c244ab3113944556d363a9e88b374);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
+  body .logoImg {
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-image: url(/dist/images/bug.png?de74a02f1ac00be13a02b73eea9aff2b);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
+  body .homeIcon2 {
+    display: block;
+    height: 64px;
+    width: 64px;
+    background-image: url(/dist/images/128.png?eb1ea450336344b842bcc3f8e83051d8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
+  body img {
+    display: block;
+    width: 50px; }
+
+body {
+  background-color: pink !important; }
+

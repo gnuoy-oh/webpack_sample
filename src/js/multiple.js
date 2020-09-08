@@ -3,13 +3,12 @@ js
 **************************/
 import './common.js';
 
-
 /**************************
 css
 **************************/
 
-import '../scss/utils/common.scss';
 import '../scss/layout/common.scss';
+import '../scss/multiple/multiple.scss'
 
 /**************************
 png / jpg / gif image
@@ -18,10 +17,10 @@ png / jpg / gif image
 /**************************
 js test
 **************************/
-const varText = "IAMINDEX";
+const multipleText = "I AM MULTIPLE";
 
 const testConsole = () => {
-  console.log(varText);
+  console.log(multipleText);
 }
 
 testConsole();
