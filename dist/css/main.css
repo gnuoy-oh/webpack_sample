@@ -133,22 +133,6 @@ select {
   display: none; }
 
 /* Sprite Image - common 요소 */
-.btn_comm {
-  background: url() no-repeat; }
-
-/* 버튼 */
-.ico_comm {
-  background: url() no-repeat; }
-
-/* 아이콘 */
-.tit_comm {
-  background: url() no-repeat; }
-
-/* 타이틀 */
-.line_comm {
-  background: url() no-repeat; }
-
-/* 라인 */
 
 .svg-comm {
   fill: #333;
@@ -158,7 +142,7 @@ select {
 body {
   max-width: 1200px;
   margin: 25px auto;
-  background-color: #ccc; }
+  background-color: #ddd; }
   body h1 {
     font-size: 35px; }
   body strong {

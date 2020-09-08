@@ -4,22 +4,14 @@ const path = require("path"),
   { CleanWebpackPlugin } = require("clean-webpack-plugin"),
   SvgSpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
-// CSS Theme
 module.exports = {
-  // webpack에 내장된 최적화를 사용하도록 지시하는 것 (development / production / none)
-  // development: 빠른 빌드, 코멘트를 삭제하지 않음, 에러 메세지와 수정 사안 제안, 효율적인 디버깅 환경
-  // production: 배포용으로 최적화를 위해 빌드되는데에 시간이 더 소요 되고, 불필요한 내용을 제거 
   mode: "development",
 
-  // 어디를 컴파일 + 번들링 할지 지정
   entry: [
-    "@babel/polyfill",
+    // "@babel/polyfill",
     "./src/js/index.js",
-    "./src/scss/layout/common.scss",
-    "./src/scss/utils/common.scss",
   ],
 
-  // 컴파일 + 번들링된 js 파일이 저장될 경로와 이름 지정
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "./js/[name].bundle.js",
@@ -28,28 +20,26 @@ module.exports = {
 
   module: {
     rules: [
-      // ES6 -> ES5로 변환시키기 트랜스파일링을 위해 Babel 실행
-      {
-        test: /\.js$/,
-        include: [path.resolve(__dirname, "./src/js")],
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-            plugins: ["@babel/plugin-proposal-class-properties"],
-          },
-        },
-      },
+      // es6 -> es5 로 변환. 현재 프로젝트에서는 불필요
+      // {
+      //   test: /\.js$/,
+      //   include: [path.resolve(__dirname, "./src/js")],
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: "babel-loader",
+      //     options: {
+      //       presets: ["@babel/preset-env"],
+      //       plugins: ["@babel/plugin-proposal-class-properties"],
+      //     },
+      //   },
+      // },
 
-      // 경로에 해당하는 SASS, SCSS, CSS 파일을 가져와서 컴파일 해준다.
-      // config에서는 일반 프로그래밍 순서와 다르게 거꾸로 작업을 한다. sass -> postCss -> css 변환을 순서로 진행한다.
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader, // creates style tag from JS strings
-          "css-loader", // translates CSS into CommonJS , options { modules: true }
+          // "style-loader", // css-loader로 읽은 CSS 파일들을 html 파일에서 style태그를 만들어서 head 태그 안에 넣어준다. 현재 프로젝트에서는 불필요 (분리해서 scss 사용해야 함)
+          MiniCssExtractPlugin.loader, // JS에 포함된 CSS를 별도의 파일로 추출해줘서, bundle.js에 컴파일된 CSS를 포함시키지 않고 별도의 CSS 파일로 분리해서 하나의 파일로 번들링 해준다.
+          "css-loader", // CSS 파일 형식을 자바스크립트에서 사용할 수 있도록 변환 / build / bundling / compile을 해준다.
           "postcss-loader", // vendor prefix
           "sass-loader", // SCSS -> CSS compile
         ],
@@ -89,16 +79,16 @@ module.exports = {
       filename: "./css/[name].css",
     }),
 
-    // 최종 보여질 HTML 위치 지정
-    new HtmlWebpackPlugin({
-      title: "Project Demo",
-      minify: {
-        collapseWhitespace: true,
-      },
-      hash: true,
-      filename: "./html/index.html",
-      template: "./src/index.html",
-    }),
+    // 최종 보여질 HTML 위치 지정 -> 현재 프로젝트에서는 불필요
+    // new HtmlWebpackPlugin({
+    //   title: "Project Demo",
+    //   minify: {
+    //     collapseWhitespace: true,
+    //   },
+    //   hash: true,
+    //   filename: "./html/index.html",
+    //   template: "./src/index.html",
+    // }),
 
     // generate svg sprite
     new SvgSpriteLoaderPlugin({

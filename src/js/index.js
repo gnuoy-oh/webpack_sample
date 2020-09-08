@@ -21,7 +21,6 @@ import '../svgIcon/4.svg'
 /**************************
 png / jpg / gif image
 **************************/
-import '../images/1.jpg';
 
 /**************************
 js test
