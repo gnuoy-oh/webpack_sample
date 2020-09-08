@@ -28,8 +28,8 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           //"style-loader", // css-loader로 읽은 CSS 파일들을 html 파일에서 style태그를 만들어서 head 태그 안에 넣어준다. -> 현재 프로젝트 불필요?
-          MiniCssExtractPlugin.loader, // JS에 포함된 CSS를 별도의 파일로 추출해줘서, bundle.js에 컴파일된 CSS를 포함시키지 않고 별도의 CSS 파일로 분리해서 하나의 파일로 번들링 해준다.
-          "css-loader", // CSS 파일 형식을 자바스크립트에서 사용할 수 있도록 변환 / build / bundling / compile을 해준다.
+          MiniCssExtractPlugin.loader, // JS에 포함된 CSS를 별도의 파일로 추출해줘서 하나의 CSS 파일로 번들링 해준다.
+          "css-loader", // CSS 파일 형식을 자바스크립트에서 사용할 수 있도록 js로 변환 
           "postcss-loader", // vendor prefix, Minify
           "sass-loader", // SCSS -> CSS compile
         ],
@@ -47,15 +47,14 @@ module.exports = {
         },
       },
 
-      // Icon svg sprite generate
+      // svg icon
       {
         test: /\.svg$/,
         include: path.resolve(__dirname, "./src/svgIcon/"),
         use: {
           loader: "svg-sprite-loader",
           options: {
-            // extract: true,
-            // spriteFilename: './svgSprite/svgSprite.svg', // this is the destination of your sprite sheet
+
           },
         },
       },
@@ -76,16 +75,18 @@ module.exports = {
     ],
   },
 
+  // dev server
   devServer: {
     port: 9000,
   },
 
+  // CSS Minify
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
 
   plugins: [
-    // 컴파일 + 번들링한 CSS 위치를 지정한다.
+    // out CSS 경로
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
       chunkFilename: "[id].css",
