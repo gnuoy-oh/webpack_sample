@@ -3,7 +3,6 @@ js
 **************************/
 import './common.js';
 
-
 /**************************
 css
 **************************/
@@ -25,3 +24,5 @@ const testConsole = () => {
 }
 
 testConsole();
+
+import './svgIcon.js'

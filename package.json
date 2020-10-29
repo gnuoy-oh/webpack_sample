@@ -1,51 +1,62 @@
 {
-  "name": "webpack_sample",
+  "name": "B-IRIS-Design-System",
   "version": "1.0.0",
-  "description": "## webpack practice!",
+  "description": "IRIS Bigdata Platform 서비스들에 필요한 퍼블리싱 리소스 저장소입니다.",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "build": "webpack -d --watch",
-    "prod": "webpack -p --watch",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "prod": "webpack --config webpack.prod.js --watch",
+    "themeProd": "node ./apply-theme.js && webpack --config webpack.prod.js --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gnuoy-oh@github.com/gnuoy-oh/webpack_sample.git"
+    "url": "git+https://github.com/ohmy04180/B-IRIS-Design-System.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gnuoy-oh/webpack_sample/issues"
+    "url": "https://github.com/ohmy04180/B-IRIS-Design-System/issues"
   },
-  "homepage": "https://github.com/gnuoy-oh/webpack_sample#readme",
+  "homepage": "https://github.com/ohmy04180/B-IRIS-Design-System#readme",
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/polyfill": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "asnyc": "0.0.1-security",
+    "autoprefixer": "^10.0.1",
     "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^4.2.2",
+    "chalk": "^4.1.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^4.3.0",
     "cssnano": "^4.1.10",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.3.0",
-    "mini-css-extract-plugin": "^0.10.0",
+    "file-loader": "^6.1.0",
+    "html-loader": "^1.3.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.12.0",
+    "ncp": "^2.0.0",
     "node-sass": "^4.14.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^3.0.0",
-    "sass-loader": "^10.0.1",
-    "style-loader": "^1.2.1",
+    "postcss-cli": "^8.0.0",
+    "postcss-loader": "^4.0.4",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^1.3.0",
     "svg-sprite-loader": "^5.0.0",
-    "svgo-loader": "^2.2.1",
-    "terser-webpack-plugin": "^4.1.0",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.44.1",
+    "terser-webpack-plugin": "^4.2.3",
+    "watch": "^1.0.2",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.1",
-    "pug": "^3.0.0"
+    "clean-webpack-plugin": "^3.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.1.1",
+    "save-dev": "0.0.1-security"
   }
 }

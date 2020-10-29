@@ -10,7 +10,7 @@ css
 
 import '../scss/utils/common.scss';
 import '../scss/layout/common.scss';
-
+import './svgIcon.js'
 /**************************
 png / jpg / gif image
 **************************/

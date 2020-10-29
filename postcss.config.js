@@ -3,8 +3,8 @@ module.exports = {
     'autoprefixer': {
 			'overrideBrowserslist': ['last 2 versions']
     }, 
-    'cssnano': {
-      minimize: true
-    }
+    // 'cssnano': {
+    //   minimize: true
+    // }
   }
 }
