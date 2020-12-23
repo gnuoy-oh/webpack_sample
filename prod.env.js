@@ -1,0 +1,5 @@
+let PROJECT_NAME = "iris";
+let SERVICE_NAME = "brick";
+
+exports.PROJECT_NAME = PROJECT_NAME;
+exports.SERVICE_NAME = SERVICE_NAME;
